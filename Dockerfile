@@ -3,7 +3,7 @@ FROM pangeo/pangeo-notebook:2019.12.04
 
 # Set up Jupyter
 RUN mkdir -p /home/dask/notebooks 
-RUN conda install --quiet yes 'pip'
+RUN conda install --quiet --yes 'pip'
 RUN jupyter nbextension enable --py widgetsnbextension
 #COPY kernels/local/kernel.json /home/hadoop/.local/share/jupyter/kernels/pyspark/kernel.json
 
