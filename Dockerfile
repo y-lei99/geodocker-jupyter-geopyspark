@@ -2,7 +2,7 @@ FROM pangeo/pangeo-notebook:2019.12.04
 
 
 # Set up Jupyter
-RUN mkdir /home/dask/notebooks && \
+RUN mkdir -p /home/dask/notebooks && \
     pip3 install --user pytest && \
     jupyter nbextension enable --py widgetsnbextension
 #COPY kernels/local/kernel.json /home/hadoop/.local/share/jupyter/kernels/pyspark/kernel.json
